@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: llama-index-java
+
+server:
+  port: 8080
+
+openai:
+  api-key: ${OPENAI_API_KEY:}
+  embedding-model: text-embedding-3-small
+  llm-model: gpt-4o-mini
+  embedding-timeout: 120000
+  llm-timeout: 300000
+  max-retries: 5
+  httpx-timeout: 300000
+
+index:
+  vector:
+    top-k: 3
+  summary:
+    top-k: 3
+  keyword:
+    top-k: 3
+  hybrid:
+    vector-k: 5
+    keyword-k: 5
+
+logging:
+  level:
+    root: INFO
+    com.indexing: DEBUG

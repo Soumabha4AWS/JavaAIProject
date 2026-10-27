@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: weather-report-agent
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:}
+      chat:
+        options:
+          model: gpt-4o
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.weather.ai: DEBUG
+    org.springframework.ai: DEBUG
+

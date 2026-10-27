@@ -1,0 +1,33 @@
+# ── Spring AI / OpenAI ──────────────────────────────────────────────────────
+spring:
+  ai:
+    openai:
+      api-key: 
+      embedding:
+        options:
+          model: text-embedding-3-small
+
+  # ── Server ─────────────────────────────────────────────────────────────────
+server:
+  port: 8080
+
+# ── Application ──────────────────────────────────────────────────────────────
+embedding:
+  # Number of top-similar tickets to retrieve
+  top-k: 5
+  # Path to the ticket dataset (relative to working directory)
+  tickets-file: synthetic_tickets.json
+  # Search query used for similarity ranking
+  query: "Users can't login after changing password"
+
+# ── Springdoc / Swagger UI ───────────────────────────────────────────────────
+# Swagger UI : http://localhost:8080/swagger-ui.html
+# OpenAPI JSON: http://localhost:8080/v3/api-docs
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+    try-it-out-enabled: true
+  api-docs:
+    path: /v3/api-docs

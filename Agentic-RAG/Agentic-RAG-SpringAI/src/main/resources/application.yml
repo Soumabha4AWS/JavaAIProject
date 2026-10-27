@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: agentic-rag-support
+  ai:
+    openai:
+      api-key: ""
+      chat:
+        options:
+          model: gpt-4o-mini
+      embedding:
+        options:
+          model: text-embedding-3-small
+
+server:
+  port: 8080

@@ -1,0 +1,27 @@
+# Maven target directory
+target/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Compiled output
+*.class
+*.jar
+*.war
+
+# Dependencies
+.m2/

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-ai-rag-workflow
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:}
+      chat:
+        options:
+          model: gpt-4o-mini
+      embedding:
+        options:
+          model: text-embedding-3-small
+
+server:
+  port: 8080
+
+rag:
+  retrieval:
+    top-k: 3
+    minimum-similarity: 0.5
